@@ -5,14 +5,19 @@
     <title>Basic JS</title>
     <script type="text/javascript">
       window.onload = function() {
-        var age = 29;
-        var score = 1000;
-        alert("You are " + age + " years old");
-        alert("Score: " + score);
-        var gpa = 3.05;
-        alert("Your GPA is: " + gpa);
-        var name = "Viviana Rishe";
-        document.getElementById('output').innerHTML = "<h1>" + name + "</h1>";
+        var sideALength = 27;
+        var sideBLength = 14.5;
+        var totalLength = sideALength + sideBLength;
+        var area = sideALength * sideBLength;
+        var diff = sideALength - sideBLength;
+        var average = totalLength / 2;
+        var out = "";
+        out += "Total length: " + totalLength;
+        out += "<br/>Area: " + area;
+        out += "<br/>Difference: " + diff;
+        out += "<br/>Average Length: " + average;
+
+        document.getElementById('output').innerHTML = out;
       }
     </script>
   </head>
