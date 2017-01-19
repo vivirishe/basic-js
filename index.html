@@ -5,23 +5,21 @@
     <title>Basic JS</title>
     <script type="text/javascript">
       window.onload = function() {
-        var sideALength = 27;
-        var sideBLength = 14.5;
-        var totalLength = sideALength + sideBLength;
-        var area = sideALength * sideBLength;
-        var diff = sideALength - sideBLength;
-        var average = totalLength / 2;
-        var out = "";
-        out += "Total length: " + totalLength;
-        out += "<br/>Area: " + area;
-        out += "<br/>Difference: " + diff;
-        out += "<br/>Average Length: " + average;
-
-        document.getElementById('output').innerHTML = out;
+        var submitButton = document.getElementById('btnSubmit');
+        submitButton.addEventListener('click', greetUser);
+        var age = prompt("How old are you?");
+        document.getElementById('output').innerHTML = "You are " + age + " years old."
+      }
+      function greetUser(){
+        var name = document.getElementById("name").value;
+        document.getElementById("output").innerHTML += "<h1>Howdy, " + name + "</h1>";
       }
     </script>
   </head>
   <body>
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <button type="submit" id="btnSubmit">Submit</button>
     <div id="output"></div>
   </body>
 </html>
