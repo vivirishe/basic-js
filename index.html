@@ -5,21 +5,30 @@
     <title>Basic JS</title>
     <script type="text/javascript">
       window.onload = function() {
-        var submitButton = document.getElementById('btnSubmit');
-        submitButton.addEventListener('click', greetUser);
         var age = prompt("How old are you?");
-        document.getElementById('output').innerHTML = "You are " + age + " years old."
-      }
-      function greetUser() {
-        var name = document.getElementById('name').value;
-        document.getElementById('output').innerHTML += "<h1>Howdy, " + name + "</h1>";
+        if (age >= 21) {
+          document.getElementById('result').innerHTML = "<p>You are of legal drinking age</p>"
+        }else {
+          document.getElementById('result').innerHTML = "<p>You are NOT of legal drinking age</p>"
+        }
+        var grade = prompt("What was your numerical exam grade?");
+        var letterGrade = "";
+        if(grade >= 90) {
+          letterGrade = "A";
+        }else if(grade >=80) {
+          letterGrade = "B";
+        }else if(grade >=70) {
+          letterGrade = "C";
+        }else if (grade >=60) {
+          letterGrade = "D";
+        }else {
+          letterGrade = "F";
+        }
+        document.getElementById('result').innerHTML += "<p>Your letter grade is " + letterGrade + "</p>";
       }
     </script>
   </head>
   <body>
-    <label for="name">Name:</label>
-    <input type="text" id="name">
-    <button type="submit" id="btnSubmit">Submit</button>
-    <div id="output"></div>
+    <div id="result"></div>
   </body>
 </html>
