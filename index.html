@@ -5,13 +5,15 @@
     <title>Basic JS</title>
     <script type="text/javascript">
       window.onload = function() {
-        var today = new Date();
-        // document.getElementById('result').innerHTML = today.toUTCString();
-        //Simple way to show date for the user
-        document.getElementById('result').innerHTML = today.toDateString();
-        var dob = new Date("October 1, 1987");
-        // document.getElementById('result').innerHTML = dob;
-
+        var airline = "jetBlue";
+        var sentence = "This dog dont hunt";
+        //shows the first letter of the string
+        console.log(airline.charAt(0));
+        console.log(airline.charCodeAt(0));
+        var string1 = "Vivi";
+        var string2 = " Rishe";
+        console.log(string1.concat(string2));
+        console.log(airline.indexOf("B"));
       }
     </script>
   </head>
