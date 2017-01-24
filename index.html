@@ -3,31 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Basic JS</title>
-    <style>
-      #box {
-        width: 200px;
-        height: 200px;
-        background-color: darkblue;
-      }
-    </style>
     <script type="text/javascript">
       window.onload = function() {
-          document.getElementById('box').addEventListener('click', boxClicked, false);
-          document.getElementById('box').addEventListener('mousedown', boxMouseDown, false);
-          document.getElementById('box').addEventListener('mouseover', boxMouseOver, false);
-      }
-      function boxMouseDown(event) {
-        document.getElementById('result').innerHTML = "<h2>Mouse down</h2>";
-      }
-      function boxMouseOver(event) {
-        document.getElementById('result').innerHTML = "<h2>Mouse over</h2>";
-      }
-      function boxClicked(event) {
-        console.log(event);
-        document.getElementById('result').innerHTML = "<h2>Click</h2>";
-        if(event.ctrlKey == true) {
-          document.getElementById('box').style.display = "none"; 
-        }
+        var today = new Date();
+        // document.getElementById('result').innerHTML = today.toUTCString();
+        //Simple way to show date for the user
+        document.getElementById('result').innerHTML = today.toDateString();
+        var dob = new Date("October 1, 1987");
+        // document.getElementById('result').innerHTML = dob;
+
       }
     </script>
   </head>
