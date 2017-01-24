@@ -5,19 +5,11 @@
     <title>Basic JS</title>
     <script type="text/javascript">
       window.onload = function() {
-        var x = 0;
-        while (x < 50) {
-          document.getElementById('result').innerHTML += "<h2>" + x + "</h2>";
-          x++;
+        var airlines = new Array("American", "Southwest", "United", "Virgin America");
+        // document.getElementById('result').innerHTML = airlines;
+        for (var i = 0; i < airlines.length; i++) {
+          document.getElementById('result').innerHTML += "<h2>" + airlines[i] + "</h2>";
         }
-        for (var i = 0; i < 100; i++) {
-          console.log(i);
-        }
-        // while (input != "XXX") {
-        //   var input = prompt("Enter yout value");
-        //   alert("Continue");
-        // }
-
       }
     </script>
   </head>
