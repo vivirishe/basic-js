@@ -5,20 +5,28 @@
     <title>Basic JS</title>
     <script type="text/javascript">
       window.onload = function() {
-        var airline = "jetBlue";
-        var sentence = "This dog dont hunt";
-        //shows the first letter of the string
-        console.log(airline.charAt(0));
-        console.log(airline.charCodeAt(0));
-        var string1 = "Vivi";
-        var string2 = " Rishe";
-        console.log(string1.concat(string2));
-        console.log(airline.indexOf("B"));
+        player = document.getElementById('player');
+        player.src = "08_Track8.mp3";
+        document.getElementById('btnPlay').addEventListener('click', playMusic, false);
+        document.getElementById('btnPause').addEventListener('click', pauseMusic, false);
+        document.getElementById('btnStop').addEventListener('click', stopMusic, false);
+      }
+      function playMusic(e) {
+        player.play();
+      }
+      function pauseMusic(e) {
+        player.pause();
+      }
+      function stopMusic(e) {
+        player.pause();
+        player.currentTime = 0;
       }
     </script>
   </head>
   <body>
-    <div id="box"></div>
-    <div id="result"></div>
+    <audio id="player"></audio>
+    <button id="btnPlay">Play Music</button>
+    <button id="btnPause">Pause Music</button>
+    <button id="btnStop">Stop Music</button>
   </body>
 </html>
