@@ -10,6 +10,10 @@
         document.getElementById('btnPlay').addEventListener('click', playMusic, false);
         document.getElementById('btnPause').addEventListener('click', pauseMusic, false);
         document.getElementById('btnStop').addEventListener('click', stopMusic, false);
+        document.getElementById('volumeSlider').addEventListener('input', changeVolume, false);
+      }
+      function changeVolume(e) {
+        player.volume = document.getElementById('volumeSlider').value;
       }
       function playMusic(e) {
         player.play();
@@ -24,9 +28,11 @@
     </script>
   </head>
   <body>
+    <!-- we can change audio for video tag and use a video src -->
     <audio id="player"></audio>
     <button id="btnPlay">Play Music</button>
     <button id="btnPause">Pause Music</button>
-    <button id="btnStop">Stop Music</button>
+    <button id="btnStop">Stop Music</button> <br>
+    <input type="range" min="0" max="1" step=".01" id="volumeSlider">
   </body>
 </html>
